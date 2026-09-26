@@ -1,0 +1,117 @@
+# Muthumanickam's portfolio content
+# Edit this file to update copy, links, projects, skills, or timeline entries.
+
+profile:
+  firstName: Muthu
+  name: Muthumanickam
+  role: Designer & Developer
+  location: Based in San Francisco, CA
+  intro: I shape thoughtful digital products where clarity, craft, and technology meet.
+  availability: Available for select freelance projects
+  email: hello@muthumanickam.com
+
+navigation:
+  - label: Work
+    href: "#work"
+  - label: About
+    href: "#about"
+  - label: Experience
+    href: "#experience"
+  - label: Contact
+    href: "#contact"
+
+projects:
+  - title: Meridian
+    category: Financial wellbeing
+    year: "2026"
+    description: A quiet, confidence-building financial companion that brings clarity to everyday decisions.
+    tags: [Product design, Strategy, Next.js]
+    accent: "#e2e8f0"
+    accentDeep: "#7389a6"
+    link: "#"
+  - title: Field Notes
+    category: Creative platform
+    year: "2025"
+    description: A considered home for independent voices, built around the joy of slowing down and looking closer.
+    tags: [Art direction, UX design, Editorial]
+    accent: "#eee6d8"
+    accentDeep: "#b19265"
+    link: "#"
+  - title: Luma
+    category: Health technology
+    year: "2024"
+    description: Turning complex health data into a daily experience that feels personal, warm, and easy to use.
+    tags: [Design systems, Research, iOS]
+    accent: "#e5e2ef"
+    accentDeep: "#8c82b2"
+    link: "#"
+
+skills:
+  - group: Design
+    items: [Product design, UI/UX, Design systems, Prototyping, Art direction]
+  - group: Development
+    items: [React, Next.js, TypeScript, CSS, Motion]
+  - group: Tools
+    items: [Figma, Framer, GitHub, Notion, Adobe CC]
+
+about:
+  eyebrow: A little about me
+  title: I care about the details people feel, not just the ones they see.
+  body: I am a multidisciplinary designer and developer with a soft spot for simple systems, good type, and products that earn a place in someone's day. My practice blends strategic thinking with hands-on craft—from the first sketch to the final interaction.
+  note: Currently exploring the space between useful AI and human-centered product experiences.
+
+experience:
+  - company: Northstar Studio
+    role: Senior Product Designer
+    period: 2024 — Present
+    description: Leading product direction and building thoughtful, scalable interfaces for early-stage teams.
+  - company: Kinfolk Digital
+    role: Product Designer
+    period: 2021 — 2024
+    description: Designed digital experiences and identity systems for culture, hospitality, and technology clients.
+  - company: Independent
+    role: Designer & Developer
+    period: 2019 — 2021
+    description: Partnered with small businesses to take ideas from a first brief to a polished launch.
+
+education:
+  - institution: California College of the Arts
+    degree: BFA, Interaction Design
+    period: 2015 — 2019
+  - institution: IDEO U
+    degree: Foundations in Design Thinking
+    period: "2020"
+
+interests:
+  title: Off the clock
+  intro: Things that keep my perspective fresh.
+  items:
+    - name: Street photography
+      detail: Collecting small moments in passing.
+      symbol: ◌
+    - name: Type & print
+      detail: Chasing the perfect printed page.
+      symbol: Aa
+    - name: Long runs
+      detail: The best kind of mental reset.
+      symbol: ↗
+    - name: Good films
+      detail: Always building a watchlist.
+      symbol: ◐
+
+additional:
+  eyebrow: Elsewhere
+  title: I share notes on design, culture, and the craft of making.
+  cta: Read my journal
+  href: "#"
+
+socials:
+  - label: LinkedIn
+    url: "https://www.linkedin.com"
+  - label: Behance
+    url: "https://www.behance.net"
+  - label: Instagram
+    url: "https://www.instagram.com"
+
+footer:
+  credit: Design inspired by Apple’s community resources.
