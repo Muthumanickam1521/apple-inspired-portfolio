@@ -14,8 +14,7 @@ export function ThemeToggle() {
 
   useEffect(() => {
     const saved = localStorage.getItem("portfolio-theme") as Theme | null;
-    const system = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-    const nextTheme = saved ?? system;
+    const nextTheme = saved ?? "light";
     setTheme(nextTheme);
     applyTheme(nextTheme);
   }, []);
