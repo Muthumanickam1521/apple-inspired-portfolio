@@ -6,7 +6,7 @@ profile:
   name: Muthumanickam
   role: Designer & Developer
   location: Based in San Francisco, CA
-  intro: I shape thoughtful digital products where clarity, craft, and technology meet.
+  intro: Independent designer and developer making digital products that are clear, useful, and considered.
   availability: Available for select freelance projects
   email: hello@muthumanickam.com
 
@@ -24,7 +24,7 @@ projects:
   - title: Meridian
     category: Financial wellbeing
     year: "2026"
-    description: A quiet, confidence-building financial companion that brings clarity to everyday decisions.
+    description: A financial companion that helps people make everyday decisions with more confidence.
     tags: [Product design, Strategy, Next.js]
     accent: "#e2e8f0"
     accentDeep: "#7389a6"
@@ -32,7 +32,7 @@ projects:
   - title: Field Notes
     category: Creative platform
     year: "2025"
-    description: A considered home for independent voices, built around the joy of slowing down and looking closer.
+    description: An editorial home for independent voices, designed for slowing down and looking closer.
     tags: [Art direction, UX design, Editorial]
     accent: "#eee6d8"
     accentDeep: "#b19265"
@@ -40,7 +40,7 @@ projects:
   - title: Luma
     category: Health technology
     year: "2024"
-    description: Turning complex health data into a daily experience that feels personal, warm, and easy to use.
+    description: A calmer daily experience for understanding personal health data.
     tags: [Design systems, Research, iOS]
     accent: "#e5e2ef"
     accentDeep: "#8c82b2"
@@ -56,9 +56,9 @@ skills:
 
 about:
   eyebrow: A little about me
-  title: I care about the details people feel, not just the ones they see.
-  body: I am a multidisciplinary designer and developer with a soft spot for simple systems, good type, and products that earn a place in someone's day. My practice blends strategic thinking with hands-on craft—from the first sketch to the final interaction.
-  note: Currently exploring the space between useful AI and human-centered product experiences.
+  title: I care about the details people feel—not only the ones they see.
+  body: I am a designer and developer with a soft spot for simple systems, good type, and products that earn a place in someone's day. I work from the first sketch to the final interaction.
+  note: Currently exploring how AI can make everyday products more useful and human.
 
 experience:
   - company: Northstar Studio
