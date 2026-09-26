@@ -21,6 +21,8 @@ navigation:
     href: "#contact"
 
 projects:
+  # Optional: add an image path when real project imagery is ready.
+  # Example: image: /images/projects/meridian.jpg
   - title: Meridian
     category: Financial wellbeing
     year: "2026"
@@ -44,6 +46,30 @@ projects:
     tags: [Design systems, Research, iOS]
     accent: "#e5e2ef"
     accentDeep: "#8c82b2"
+    link: "#"
+  - title: Common Ground
+    category: Community platform
+    year: "2024"
+    description: A simple, welcoming way for local communities to organize around shared interests.
+    tags: [Product design, Identity, Web]
+    accent: "#dce9df"
+    accentDeep: "#6f9678"
+    link: "#"
+  - title: Sora House
+    category: Hospitality
+    year: "2023"
+    description: A digital home for a small hotel, shaped around the feeling of a considered stay.
+    tags: [Art direction, Web design, Development]
+    accent: "#e9dfd3"
+    accentDeep: "#a5764f"
+    link: "#"
+  - title: Interval
+    category: Productivity
+    year: "2023"
+    description: A focused workspace that helps creative teams make space for their best work.
+    tags: [UX design, Prototyping, React]
+    accent: "#dce4ed"
+    accentDeep: "#687d97"
     link: "#"
 
 skills:
