@@ -9,6 +9,8 @@ profile:
   intro: Independent designer and developer making digital products that are clear, useful, and considered.
   availability: Available for select freelance projects
   email: hello@muthumanickam.com
+  # Put the PDF at public/resume.pdf (replace the placeholder) or change this path.
+  resume: /resume.pdf
 
 navigation:
   - label: Work
@@ -23,6 +25,7 @@ navigation:
     href: "#contact"
 
 projects:
+  # Each project's case study is content/work/<slug>.md.
   # Optional: add an image path when real project imagery is ready.
   # Example: image: /images/projects/meridian.jpg
   - title: Meridian
@@ -32,7 +35,7 @@ projects:
     tags: [Product design, Strategy, Next.js]
     accent: "#e2e8f0"
     accentDeep: "#7389a6"
-    link: "#"
+    slug: meridian
   - title: Field Notes
     category: Creative platform
     year: "2025"
@@ -40,7 +43,7 @@ projects:
     tags: [Art direction, UX design, Editorial]
     accent: "#eee6d8"
     accentDeep: "#b19265"
-    link: "#"
+    slug: field-notes
   - title: Luma
     category: Health technology
     year: "2024"
@@ -48,7 +51,7 @@ projects:
     tags: [Design systems, Research, iOS]
     accent: "#e5e2ef"
     accentDeep: "#8c82b2"
-    link: "#"
+    slug: luma
   - title: Common Ground
     category: Community platform
     year: "2024"
@@ -56,7 +59,7 @@ projects:
     tags: [Product design, Identity, Web]
     accent: "#dce9df"
     accentDeep: "#6f9678"
-    link: "#"
+    slug: common-ground
   - title: Sora House
     category: Hospitality
     year: "2023"
@@ -64,7 +67,7 @@ projects:
     tags: [Art direction, Web design, Development]
     accent: "#e9dfd3"
     accentDeep: "#a5764f"
-    link: "#"
+    slug: sora-house
   - title: Interval
     category: Productivity
     year: "2023"
@@ -72,7 +75,7 @@ projects:
     tags: [UX design, Prototyping, React]
     accent: "#dce4ed"
     accentDeep: "#687d97"
-    link: "#"
+    slug: interval
 
 skills:
   - group: Design

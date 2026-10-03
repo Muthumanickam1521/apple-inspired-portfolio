@@ -3,9 +3,9 @@ import { join } from "node:path";
 import { parse } from "yaml";
 
 export type Portfolio = {
-  profile: { firstName: string; name: string; role: string; location: string; intro: string; availability: string; email: string };
+  profile: { firstName: string; name: string; role: string; location: string; intro: string; availability: string; email: string; resume: string };
   navigation: { label: string; href: string }[];
-  projects: { title: string; category: string; year: string; description: string; tags: string[]; accent: string; accentDeep: string; image?: string; link: string }[];
+  projects: { title: string; category: string; year: string; description: string; tags: string[]; accent: string; accentDeep: string; image?: string; slug: string }[];
   skills: { group: string; items: string[] }[];
   about: { eyebrow: string; title: string; body: string; note: string };
   experience: { company: string; role: string; period: string; description: string }[];
@@ -15,6 +15,8 @@ export type Portfolio = {
   socials: { label: string; url: string }[];
   footer: { credit: string };
 };
+
+export const siteUrl = "https://www.muthumanickam.tech";
 
 export function getPortfolio(): Portfolio {
   const source = readFileSync(join(process.cwd(), "content", "portfolio.yml"), "utf8");

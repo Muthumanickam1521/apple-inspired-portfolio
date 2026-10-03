@@ -15,7 +15,7 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = getPost((await params).slug);
-  return post ? { title: `${post.title} — Muthumanickam`, description: post.summary } : {};
+  return post ? { title: post.title, description: post.summary, openGraph: { type: "article", title: post.title, description: post.summary } } : {};
 }
 
 export default async function BlogPost({ params }: Props) {

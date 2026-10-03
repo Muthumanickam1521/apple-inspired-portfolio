@@ -4,7 +4,9 @@ import { SiteFooter, SiteHeader } from "@/components/site-header";
 import { getPortfolio } from "@/lib/portfolio";
 import { formatDate, getPosts } from "@/lib/writing";
 
-export const metadata: Metadata = { title: "Blog — Muthumanickam" };
+const { writing } = getPortfolio();
+
+export const metadata: Metadata = { title: "Blog", description: writing.blogIntro, openGraph: { title: "Blog", description: writing.blogIntro } };
 
 export default function BlogIndex() {
   const content = getPortfolio();
