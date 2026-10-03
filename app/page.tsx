@@ -19,7 +19,7 @@ export default function Home() {
 
       <section className="apple-hero shell">
         <Reveal>
-          <p className="status-pill"><span aria-hidden="true" />{profile.availability}</p>
+          <p className="kicker">{profile.availability}</p>
           <h1>{profile.name}<br /><span>{profile.role}.</span></h1>
           <p className="hero-lede">{profile.intro}</p>
           <div className="hero-actions"><a className="button primary" href="#work">View selected work <b>›</b></a><a className="button text-button" href={`mailto:${profile.email}`}>Get in touch <b>↗</b></a></div>
