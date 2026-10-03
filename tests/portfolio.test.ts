@@ -27,12 +27,14 @@ describe("content/portfolio.yml", () => {
       expect(project.accent).toMatch(/^#[0-9a-f]{3,8}$/i);
       expect(project.accentDeep).toMatch(/^#[0-9a-f]{3,8}$/i);
       expect(Array.isArray(project.tags)).toBe(true);
+      expect(project.slug).toMatch(/^[a-z0-9-]+$/);
     }
   });
 
   it("uses unique titles and names where they are React keys", () => {
     const unique = (values: string[]) => new Set(values).size === values.length;
     expect(unique(content.projects.map((p) => p.title))).toBe(true);
+    expect(unique(content.projects.map((p) => p.slug))).toBe(true);
     expect(unique(content.skills.map((s) => s.group))).toBe(true);
     expect(unique(content.experience.map((e) => e.company))).toBe(true);
     expect(unique(content.interests.items.map((i) => i.name))).toBe(true);

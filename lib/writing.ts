@@ -9,7 +9,7 @@ export type Post = { slug: string; title: string; date: string; summary: string;
 
 const FRONT_MATTER = /^---\r?\n([\s\S]*?)\r?\n---\r?\n?([\s\S]*)$/;
 
-function readEntries(folder: string) {
+export function readEntries(folder: string) {
   const dir = join(process.cwd(), "content", folder);
   return readdirSync(dir)
     .filter((file) => file.endsWith(".md"))
