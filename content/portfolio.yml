@@ -127,14 +127,12 @@ interests:
       detail: Always building a watchlist.
       symbol: ◐
 
-# Blog posts live in content/blog and brain-dump notes in content/notes (one Markdown file each).
+# Blog posts live in content/blog (one Markdown file each).
 writing:
   eyebrow: Writing
   title: I share notes on design, culture, and the craft of making.
   blogTitle: Longer thoughts on design and building things.
   blogIntro: Essays on product design, type, and the details people feel.
-  notesTitle: Half-formed thoughts, kept short.
-  notesIntro: A running stream of small observations. Some of them grow into posts.
 
 socials:
   - label: LinkedIn

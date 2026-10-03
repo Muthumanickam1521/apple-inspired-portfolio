@@ -3,11 +3,9 @@ import { join } from "node:path";
 import { marked } from "marked";
 import { parse } from "yaml";
 
-// Blog posts live in content/blog and brain-dump notes in content/notes,
-// one Markdown file each with a small YAML front matter block.
+// Blog posts live in content/blog, one Markdown file each with a small YAML front matter block.
 
 export type Post = { slug: string; title: string; date: string; summary: string; html: string };
-export type Note = { slug: string; date: string; html: string };
 
 const FRONT_MATTER = /^---\r?\n([\s\S]*?)\r?\n---\r?\n?([\s\S]*)$/;
 
@@ -38,10 +36,6 @@ export function getPosts(): Post[] {
 
 export function getPost(slug: string): Post | undefined {
   return getPosts().find((post) => post.slug === slug);
-}
-
-export function getNotes(): Note[] {
-  return readEntries("notes").map(({ slug, date, html }) => ({ slug, date, html }));
 }
 
 export function formatDate(date: string) {

@@ -2,14 +2,13 @@ import Link from "next/link";
 import { Reveal } from "@/components/reveal";
 import { SiteHeader } from "@/components/site-header";
 import { getPortfolio } from "@/lib/portfolio";
-import { formatDate, getNotes, getPosts } from "@/lib/writing";
+import { formatDate, getPosts } from "@/lib/writing";
 import type { CSSProperties } from "react";
 
 export default function Home() {
   const content = getPortfolio();
   const { profile } = content;
-  const posts = getPosts().slice(0, 2);
-  const notes = getNotes().slice(0, 3);
+  const posts = getPosts().slice(0, 3);
 
   return (
     <main id="top">
@@ -35,10 +34,7 @@ export default function Home() {
 
       <section className="interests"><div className="shell"><Reveal className="interests-title"><p className="kicker">{content.interests.title}</p><h2>{content.interests.intro}</h2></Reveal><div className="interest-row">{content.interests.items.map((item,index) => <Reveal key={item.name} delay={index*.07}><article><span>{item.symbol}</span><h3>{item.name}</h3><p>{item.detail}</p></article></Reveal>)}</div></div></section>
 
-      <section className="writing shell" id="writing"><Reveal><p className="kicker">{content.writing.eyebrow}</p><h2>{content.writing.title}</h2></Reveal><div className="writing-grid">
-        <Reveal><div className="writing-col"><div className="writing-head"><h3>Blog</h3><Link href="/blog">All posts <b>›</b></Link></div>{posts.map((post) => <Link key={post.slug} href={`/blog/${post.slug}`} className="writing-item"><time dateTime={post.date}>{formatDate(post.date)}</time><h4>{post.title}</h4><p>{post.summary}</p></Link>)}</div></Reveal>
-        <Reveal delay={0.08}><div className="writing-col"><div className="writing-head"><h3>Brain dump</h3><Link href="/notes">All notes <b>›</b></Link></div>{notes.map((note) => <article key={note.slug} className="writing-item"><time dateTime={note.date}>{formatDate(note.date)}</time><div className="note-body" dangerouslySetInnerHTML={{ __html: note.html }} /></article>)}</div></Reveal>
-      </div></section>
+      <section className="writing shell" id="writing"><Reveal><p className="kicker">{content.writing.eyebrow}</p><h2>{content.writing.title}</h2></Reveal><Reveal><div className="writing-col"><div className="writing-head"><h3>Latest posts</h3><Link href="/blog">All posts <b>›</b></Link></div>{posts.map((post) => <Link key={post.slug} href={`/blog/${post.slug}`} className="writing-item"><time dateTime={post.date}>{formatDate(post.date)}</time><h4>{post.title}</h4><p>{post.summary}</p></Link>)}</div></Reveal></section>
 
       <footer id="contact"><div className="shell footer-main"><Reveal><p className="kicker">Have a project in mind?</p><h2>Let&apos;s make something<br /><span>remarkable.</span></h2><a href={`mailto:${profile.email}`} className="button primary">Start a conversation <b>↗</b></a></Reveal></div><div className="shell footer-meta"><p>© {new Date().getFullYear()} {profile.name}</p><div>{content.socials.map((social) => <a key={social.label} href={social.url} target="_blank" rel="noreferrer">{social.label}</a>)}</div><p>{content.footer.credit}</p></div></footer>
     </main>
