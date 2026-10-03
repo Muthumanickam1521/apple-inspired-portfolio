@@ -19,7 +19,7 @@ jobs:
         if: env.HAS_API_KEY != 'true'
         run: echo "::warning::ANTHROPIC_API_KEY secret is not set, skipping the AI security review."
 
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         if: env.HAS_API_KEY == 'true'
         with:
           ref: ${{ github.event.pull_request.head.sha }}
