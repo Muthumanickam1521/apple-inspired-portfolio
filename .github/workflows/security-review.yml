@@ -1,0 +1,32 @@
+name: AI Security Review
+
+on:
+  pull_request:
+    branches: [master]
+
+permissions:
+  contents: read
+  pull-requests: write # lets the reviewer comment findings on the PR
+
+jobs:
+  security-review:
+    name: Claude security review
+    runs-on: ubuntu-latest
+    env:
+      HAS_API_KEY: ${{ secrets.ANTHROPIC_API_KEY != '' }}
+    steps:
+      - name: Skip when the API key secret is missing
+        if: env.HAS_API_KEY != 'true'
+        run: echo "::warning::ANTHROPIC_API_KEY secret is not set, skipping the AI security review."
+
+      - uses: actions/checkout@v4
+        if: env.HAS_API_KEY == 'true'
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 2
+
+      - uses: anthropics/claude-code-security-review@main
+        if: env.HAS_API_KEY == 'true'
+        with:
+          comment-pr: true
+          claude-api-key: ${{ secrets.ANTHROPIC_API_KEY }}

@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",
@@ -17,9 +19,17 @@
     "yaml": "^2.8.1"
   },
   "devDependencies": {
+    "@eslint/eslintrc": "^3.3.7",
+    "@testing-library/dom": "^10.4.2",
+    "@testing-library/react": "^16.3.3",
     "@types/node": "^22.15.3",
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
-    "typescript": "^5.8.3"
+    "@vitejs/plugin-react": "^6.1.1",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "^15.5.4",
+    "jsdom": "^29.1.1",
+    "typescript": "^5.8.3",
+    "vitest": "^5.0.3"
   }
 }
