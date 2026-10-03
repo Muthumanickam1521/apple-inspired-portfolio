@@ -12,7 +12,7 @@ describe("content/portfolio.yml", () => {
   });
 
   it("only links navigation to sections that exist on the page", () => {
-    const sectionIds = ["#top", "#work", "#about", "#experience", "#contact"];
+    const sectionIds = ["#top", "#work", "#about", "#experience", "#writing", "#contact"];
     for (const item of content.navigation) {
       expect(sectionIds, `navigation "${item.label}"`).toContain(item.href);
     }

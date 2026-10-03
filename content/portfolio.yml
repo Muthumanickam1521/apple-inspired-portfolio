@@ -17,6 +17,8 @@ navigation:
     href: "#about"
   - label: Experience
     href: "#experience"
+  - label: Writing
+    href: "#writing"
   - label: Contact
     href: "#contact"
 
@@ -125,11 +127,12 @@ interests:
       detail: Always building a watchlist.
       symbol: ◐
 
-additional:
-  eyebrow: Elsewhere
+# Blog posts live in content/blog (one Markdown file each).
+writing:
+  eyebrow: Writing
   title: I share notes on design, culture, and the craft of making.
-  cta: Read my journal
-  href: "#"
+  blogTitle: Longer thoughts on design and building things.
+  blogIntro: Essays on product design, type, and the details people feel.
 
 socials:
   - label: LinkedIn

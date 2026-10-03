@@ -11,7 +11,7 @@ export type Portfolio = {
   experience: { company: string; role: string; period: string; description: string }[];
   education: { institution: string; degree: string; period: string }[];
   interests: { title: string; intro: string; items: { name: string; detail: string; symbol: string }[] };
-  additional: { eyebrow: string; title: string; cta: string; href: string };
+  writing: { eyebrow: string; title: string; blogTitle: string; blogIntro: string };
   socials: { label: string; url: string }[];
   footer: { credit: string };
 };
