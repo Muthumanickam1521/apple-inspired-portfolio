@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Analytics } from "@vercel/analytics/next";
 import { siteUrl } from "@/lib/portfolio";
 import { themeScript } from "@/lib/theme";
@@ -13,6 +13,17 @@ export const metadata: Metadata = {
   description,
   openGraph: { type: "website", siteName: "Muthumanickam", title: "Muthumanickam — Designer & Developer", description },
   twitter: { card: "summary_large_image" },
+};
+
+// No maximum-scale or user-scalable=no, so browser zoom and pinch-zoom keep working. Theme colour tints the Chrome/Edge/Safari toolbar.
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  colorScheme: "light dark",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#000000" },
+  ],
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
