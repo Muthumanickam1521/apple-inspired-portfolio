@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Reveal } from "@/components/reveal";
 import { SiteHeader } from "@/components/site-header";
+import { ThemeToggle } from "@/components/theme-toggle";
 import { getPortfolio } from "@/lib/portfolio";
 import { formatDate, getPosts } from "@/lib/writing";
 import type { CSSProperties } from "react";
@@ -16,9 +17,10 @@ export default function Home() {
 
       <section className="apple-hero shell">
         <Reveal>
-          <h1>{profile.name}<br /><span>{profile.role}.</span></h1>
+          <h1>{profile.role}.</h1>
           <p className="hero-lede">{profile.intro}</p>
           <div className="hero-actions"><a className="button primary" href="#work">View case studies <b>›</b></a><a className="button text-button" href={`mailto:${profile.email}`}>Get in touch <b>↗</b></a></div>
+          {profile.stats && <dl className="hero-stats">{profile.stats.map((stat) => <div key={stat.label}>{stat.value && <dt>{stat.value}</dt>}<dd>{stat.label}</dd></div>)}</dl>}
         </Reveal>
       </section>
 
@@ -36,7 +38,7 @@ export default function Home() {
 
       <section className="writing shell" id="writing"><Reveal><p className="kicker">{content.writing.eyebrow}</p><h2>{content.writing.title}</h2></Reveal><Reveal><div className="writing-col"><div className="writing-head"><h3>Latest posts</h3><Link href="/blog">All posts <b>›</b></Link></div>{posts.map((post) => <Link key={post.slug} href={`/blog/${post.slug}`} className="writing-item"><time dateTime={post.date}>{formatDate(post.date)}</time><h4>{post.title}</h4><p>{post.summary}</p></Link>)}</div></Reveal></section>
 
-      <footer id="contact"><div className="shell footer-main"><Reveal><p className="kicker">Open to new roles and projects?</p><h2>Let&apos;s make something<br /><span>remarkable.</span></h2><div className="footer-actions"><a href={`mailto:${profile.email}`} className="button primary">Start a conversation <b>↗</b></a><a href={profile.resume} className="button text-button" target="_blank" rel="noreferrer">Download résumé <b>↓</b></a></div></Reveal></div><div className="shell footer-meta"><p>© {new Date().getFullYear()} {profile.name}</p><div>{content.socials.map((social) => <a key={social.label} href={social.url} target="_blank" rel="noreferrer">{social.label}</a>)}</div><p>{content.footer.credit}</p></div></footer>
+      <footer id="contact"><div className="shell footer-main"><Reveal><p className="kicker">Open to new roles and projects?</p><h2>Let&apos;s make something<br /><span>remarkable.</span></h2><div className="footer-actions"><a href={`mailto:${profile.email}`} className="button primary">Start a conversation <b>↗</b></a><a href={profile.resume} className="button text-button" target="_blank" rel="noreferrer">Download résumé <b>↓</b></a></div></Reveal></div><div className="shell footer-meta"><p>© {new Date().getFullYear()} {profile.name}</p><div>{content.socials.map((social) => <a key={social.label} href={social.url} target="_blank" rel="noreferrer">{social.label}</a>)}</div><div className="footer-end"><ThemeToggle /><p>{content.footer.credit}</p></div></div></footer>
     </main>
   );
 }

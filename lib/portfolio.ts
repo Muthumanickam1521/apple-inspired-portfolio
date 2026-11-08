@@ -3,7 +3,7 @@ import { join } from "node:path";
 import { parse } from "yaml";
 
 export type Portfolio = {
-  profile: { firstName: string; name: string; role: string; location: string; intro: string; availability: string; email: string; resume: string };
+  profile: { firstName: string; name: string; role: string; location: string; intro: string; stats?: { value?: string; label: string }[]; availability: string; email: string; resume: string };
   navigation: { label: string; href: string }[];
   projects: { title: string; category: string; year: string; description: string; tags: string[]; accent: string; accentDeep: string; image?: string; slug: string }[];
   skills: { group: string; items: string[] }[];

@@ -7,7 +7,14 @@ profile:
   name: Muthumanickam
   role: Data Scientist & ML Engineer
   location: Based in India
-  intro: I turn messy data into machine learning systems that ship, scale, and move the numbers.
+  intro: I turn messy data into models that ship.
+  # Hero stats row. Replace with your real numbers. Omit value for a text-only item.
+  stats:
+    - value: "12"
+      label: models in production
+    - value: "38%"
+      label: lower latency
+    - label: Python · PyTorch · SQL · MLOps
   availability: Open to new opportunities
   email: hello@muthumanickam.com
   # Put the PDF at public/resume.pdf (replace the placeholder) or change this path.

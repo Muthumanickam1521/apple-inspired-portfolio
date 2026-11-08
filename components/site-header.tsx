@@ -11,13 +11,13 @@ export function SiteHeader({ content, home = false }: { content: Portfolio; home
     <header className="global-nav"><div className="nav-inner">
       <Link href={home ? "#top" : "/"} className="mark" aria-label={`${profile.name} home`}>{profile.name}</Link>
       <nav aria-label="Main navigation">{content.navigation.map((item) => <Link key={item.label} href={`${base}${item.href}`}>{item.label}</Link>)}</nav>
-      <div className="nav-actions"><ThemeToggle /><a className="nav-resume" href={profile.resume} target="_blank" rel="noreferrer">Résumé</a></div>
+      <div className="nav-actions"><a className="nav-resume" href={profile.resume} target="_blank" rel="noreferrer">Résumé</a></div>
     </div></header>
   );
 }
 
 export function SiteFooter({ content }: { content: Portfolio }) {
   return (
-    <footer><div className="shell footer-meta"><p>© {new Date().getFullYear()} {content.profile.name}</p><div>{content.socials.map((social) => <a key={social.label} href={social.url} target="_blank" rel="noreferrer">{social.label}</a>)}</div><p>{content.footer.credit}</p></div></footer>
+    <footer><div className="shell footer-meta"><p>© {new Date().getFullYear()} {content.profile.name}</p><div className="footer-links">{content.socials.map((social) => <a key={social.label} href={social.url} target="_blank" rel="noreferrer">{social.label}</a>)}</div><div className="footer-end"><ThemeToggle /><p>{content.footer.credit}</p></div></div></footer>
   );
 }
