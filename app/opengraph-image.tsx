@@ -3,7 +3,7 @@ import { renderShareImage, shareImageSize } from "@/lib/share-image";
 
 export const size = shareImageSize;
 export const contentType = "image/png";
-export const alt = "Muthumanickam, designer and developer";
+export const alt = "Muthumanickam, data scientist and ML engineer";
 
 export default function Image() {
   const { profile } = getPortfolio();

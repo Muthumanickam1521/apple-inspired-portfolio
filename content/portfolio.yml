@@ -1,13 +1,14 @@
 # Muthumanickam's portfolio content
 # Edit this file to update copy, links, projects, skills, or timeline entries.
+# NOTE: project names, metrics, employers and dates below are DRAFT placeholders. Replace them with your real work.
 
 profile:
   firstName: Muthu
   name: Muthumanickam
-  role: Designer & Developer
-  location: Based in San Francisco, CA
-  intro: Independent designer and developer making digital products that are clear, useful, and considered.
-  availability: Available for select freelance projects
+  role: Data Scientist & ML Engineer
+  location: Based in India
+  intro: I turn messy data into machine learning systems that ship, scale, and move the numbers.
+  availability: Open to new opportunities
   email: hello@muthumanickam.com
   # Put the PDF at public/resume.pdf (replace the placeholder) or change this path.
   resume: /resume.pdf
@@ -27,101 +28,70 @@ navigation:
 projects:
   # Each project's case study is content/work/<slug>.md.
   # Optional: add an image path when real project imagery is ready.
-  # Example: image: /images/projects/meridian.jpg
-  - title: Meridian
-    category: Financial wellbeing
+  # Example: image: /images/projects/demand-forecasting.jpg
+  - title: Demand Forecasting
+    category: Retail analytics
     year: "2026"
-    description: A financial companion that helps people make everyday decisions with more confidence.
-    tags: [Product design, Strategy, Next.js]
+    description: A time-series forecasting service that cut planning error by 21% across thousands of SKUs.
+    tags: [Python, LightGBM, Airflow]
     accent: "#e2e8f0"
     accentDeep: "#7389a6"
-    slug: meridian
-  - title: Field Notes
-    category: Creative platform
+    slug: demand-forecasting
+  - title: Churn Prediction
+    category: Customer analytics
     year: "2025"
-    description: An editorial home for independent voices, designed for slowing down and looking closer.
-    tags: [Art direction, UX design, Editorial]
-    accent: "#eee6d8"
-    accentDeep: "#b19265"
-    slug: field-notes
-  - title: Luma
-    category: Health technology
-    year: "2024"
-    description: A calmer daily experience for understanding personal health data.
-    tags: [Design systems, Research, iOS]
-    accent: "#e5e2ef"
-    accentDeep: "#8c82b2"
-    slug: luma
-  - title: Common Ground
-    category: Community platform
-    year: "2024"
-    description: A simple, welcoming way for local communities to organize around shared interests.
-    tags: [Product design, Identity, Web]
+    description: A gradient-boosted churn model with explainable drivers that lifted retention by 18%.
+    tags: [XGBoost, SHAP, SQL]
     accent: "#dce9df"
     accentDeep: "#6f9678"
-    slug: common-ground
-  - title: Sora House
-    category: Hospitality
-    year: "2023"
-    description: A digital home for a small hotel, shaped around the feeling of a considered stay.
-    tags: [Art direction, Web design, Development]
-    accent: "#e9dfd3"
-    accentDeep: "#a5764f"
-    slug: sora-house
-  - title: Interval
-    category: Productivity
-    year: "2023"
-    description: A focused workspace that helps creative teams make space for their best work.
-    tags: [UX design, Prototyping, React]
-    accent: "#dce4ed"
-    accentDeep: "#687d97"
-    slug: interval
+    slug: churn-prediction
+  - title: Realtime Fraud Scoring
+    category: Fintech ML
+    year: "2024"
+    description: A low-latency scoring API serving fraud decisions in under 15 ms, monitored end to end.
+    tags: [PyTorch, FastAPI, Kubernetes]
+    accent: "#e5e2ef"
+    accentDeep: "#8c82b2"
+    slug: fraud-scoring
 
 skills:
-  - group: Design
-    items: [Product design, UI/UX, Design systems, Prototyping, Art direction]
-  - group: Development
-    items: [React, Next.js, TypeScript, CSS, Motion]
-  - group: Tools
-    items: [Figma, Framer, GitHub, Notion, Adobe CC]
+  - group: Machine learning
+    items: [Forecasting, Classification, Deep learning, NLP, Experiment design]
+  - group: Data & engineering
+    items: [Python, SQL, Spark, Airflow, FastAPI]
+  - group: MLOps & cloud
+    items: [Docker, Kubernetes, MLflow, CI/CD, AWS]
 
 about:
   eyebrow: A little about me
-  title: I care about the details people feel—not only the ones they see.
-  body: I am a designer and developer with a soft spot for simple systems, good type, and products that earn a place in someone's day. I work from the first sketch to the final interaction.
-  note: Currently exploring how AI can make everyday products more useful and human.
+  title: I care about models that work in production, not only in notebooks.
+  body: I am a data scientist and ML engineer who owns the full path from problem framing and experiments to deployment and monitoring. I like simple baselines, honest evaluation, and systems other people can maintain.
+  note: Currently exploring LLM-powered tools and reliable ML evaluation.
 
 experience:
-  - company: Northstar Studio
-    role: Senior Product Designer
-    period: 2024 — Present
-    description: Leading product direction and building thoughtful, scalable interfaces for early-stage teams.
-  - company: Kinfolk Digital
-    role: Product Designer
-    period: 2021 — 2024
-    description: Designed digital experiences and identity systems for culture, hospitality, and technology clients.
-  - company: Independent
-    role: Designer & Developer
-    period: 2019 — 2021
-    description: Partnered with small businesses to take ideas from a first brief to a polished launch.
+  - company: Current company
+    role: Data Scientist & ML Engineer
+    period: 2023 — Present
+    description: Building and deploying machine learning models, from feature pipelines to production APIs and monitoring.
+  - company: Previous company
+    role: Data Scientist
+    period: 2021 — 2023
+    description: Delivered forecasting and classification models and the analytics that helped teams act on them.
 
 education:
-  - institution: California College of the Arts
-    degree: BFA, Interaction Design
-    period: 2015 — 2019
-  - institution: IDEO U
-    degree: Foundations in Design Thinking
-    period: "2020"
+  - institution: Your university
+    degree: B.E. / B.Tech, Computer Science
+    period: 2017 — 2021
 
 interests:
   title: Off the clock
   intro: Things that keep my perspective fresh.
   items:
-    - name: Street photography
-      detail: Collecting small moments in passing.
-      symbol: ◌
-    - name: Type & print
-      detail: Chasing the perfect printed page.
+    - name: Open source
+      detail: Reading and contributing to the tools I use.
+      symbol: </>
+    - name: Research papers
+      detail: One new paper a week, at least.
       symbol: Aa
     - name: Long runs
       detail: The best kind of mental reset.
@@ -133,17 +103,17 @@ interests:
 # Blog posts live in content/blog (one Markdown file each).
 writing:
   eyebrow: Writing
-  title: I share notes on design, culture, and the craft of making.
-  blogTitle: Longer thoughts on design and building things.
-  blogIntro: Essays on product design, type, and the details people feel.
+  title: I write about data science, ML in production, and lessons from shipping models.
+  blogTitle: Notes on data science and machine learning.
+  blogIntro: Practical write-ups on modelling, evaluation, MLOps, and the work around the model.
 
 socials:
   - label: LinkedIn
     url: "https://www.linkedin.com"
-  - label: Behance
-    url: "https://www.behance.net"
-  - label: Instagram
-    url: "https://www.instagram.com"
+  - label: GitHub
+    url: "https://github.com"
+  - label: Kaggle
+    url: "https://www.kaggle.com"
 
 footer:
   credit: Design inspired by Apple’s community resources.
